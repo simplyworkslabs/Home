@@ -1,0 +1,16 @@
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="20" width="180" height="180" rx="40" fill="#0F6E56"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" transform="translate(20,20)">
+    <rect x="62" y="41" width="56" height="98" rx="10"/>
+    <line x1="62" y1="118" x2="118" y2="118"/>
+  </g>
+  <circle cx="110" cy="152.5" r="3.5" fill="#FFFFFF"/>
+  <g transform="translate(20,20)" stroke="#5DCAA5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M76 62 L66 71 L76 80"/>
+    <path d="M104 62 L114 71 L104 80"/>
+    <line x1="94" y1="59" x2="86" y2="84"/>
+  </g>
+  <text x="240" y="105" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" fill="#0F2A24">SimplyWorks</text>
+  <text x="240" y="160" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" fill="#0F6E56">Labs</text>
+  <text x="240" y="192" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="3" fill="#5F5E5A">MOBILE APP DEVELOPMENT</text>
+</svg>

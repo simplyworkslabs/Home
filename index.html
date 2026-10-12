@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SimplyWorks Labs LLC | Mobile App Development</title>
-<meta name="description" content="SimplyWorks Labs LLC builds reliable, intuitive, and thoughtfully designed mobile applications for Android and iOS.">
+<title>Android Apps That Simply Work | SimplyWorks Labs LLC</title>
+<meta name="description" content="Explore seven practical Android apps from SimplyWorks Labs LLC for travel, productivity, home monitoring, driving, recording, and family life.">
 <meta name="theme-color" content="#0f6e56">
 
 <link rel="icon" type="image/png" href="./Logo/icon.png">
@@ -336,6 +336,136 @@ h2 {
     color: var(--color-primary-dark);
 }
 
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.app-card {
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    flex-direction: column;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.app-card:hover {
+    border-color: #7fd4b3;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.app-visual {
+    position: relative;
+    margin: 0;
+    background: var(--color-primary-deep);
+}
+
+.app-feature {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1024 / 500;
+    object-fit: contain;
+}
+
+.app-icon {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    right: 1.25rem;
+    bottom: -38px;
+    border: 4px solid white;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, .2);
+}
+
+.app-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.35rem 1.5rem 1.5rem;
+}
+
+.app-release {
+    width: fit-content;
+    margin: 0 0 .85rem;
+    padding: .3rem .65rem;
+    color: var(--color-primary-dark);
+    background: #eaf6f1;
+    border-radius: 999px;
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.app-card h3 {
+    max-width: calc(100% - 82px);
+    margin-bottom: .3rem;
+    color: var(--color-primary-deep);
+    font-size: 1.35rem;
+}
+
+.app-subtitle {
+    margin-bottom: .9rem;
+    color: var(--color-primary-dark);
+    font-size: .92rem;
+    font-weight: 600;
+}
+
+.app-description {
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+}
+
+.app-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    list-style: none;
+}
+
+.app-features li {
+    padding: .28rem .55rem;
+    color: #36534a;
+    background: var(--color-surface-muted);
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    font-size: .78rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.play-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    width: fit-content;
+    margin-top: auto;
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.play-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+.play-link:hover {
+    color: var(--color-primary-deep);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -552,6 +682,7 @@ h2 {
         padding-block: 4.5rem;
     }
 
+    .apps-grid,
     .services-grid,
     .contact-card,
     .footer-inner {
@@ -603,6 +734,7 @@ h2 {
 }
 
 @media (hover: none) {
+    .app-card:hover,
     .service-card:hover,
     .button:hover,
     .contact-button:hover {
@@ -640,6 +772,7 @@ h2 {
 </a>
 
 <ul class="nav-links">
+<li><a href="#apps">Apps</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#mission">Mission</a></li>
@@ -650,18 +783,170 @@ h2 {
 
 <header class="hero">
 <div class="hero-inner">
-<p class="eyebrow">Mobile application development</p>
-<h1>Building mobile apps that simply work.</h1>
-<p class="hero-copy">Reliable, intuitive, and thoughtfully designed mobile applications for Android and iOS, built around real people and real-world needs.</p>
+<p class="eyebrow">Independent Android app studio</p>
+<h1>Android apps that simply work.</h1>
+<p class="hero-copy">Seven practical Android apps published in October 2026 and developed over the preceding seven months to help with travel, productivity, home monitoring, driving, recording, and family life.</p>
 
 <div class="hero-actions">
-<a class="button button-primary" href="#contact">Contact Us</a>
-<a class="button button-secondary" href="#services">What We Build</a>
+<a class="button button-primary" href="#apps">Explore Our Apps</a>
+<a class="button button-secondary" href="#contact">Contact Us</a>
 </div>
 </div>
 </header>
 
 <main id="main-content" tabindex="-1">
+<section class="section section-muted" id="apps" aria-labelledby="apps-heading">
+<div class="section-inner">
+<div class="section-heading">
+<p class="eyebrow">Available on Google Play</p>
+<h2 id="apps-heading">Our Apps</h2>
+<p class="section-intro">Developed from March through September 2026 and published on Google Play in October, each focused tool makes an everyday task simpler.</p>
+</div>
+
+<div class="apps-grid">
+<article class="app-card">
+<figure class="app-visual">
+<img class="app-feature" src="./Assets/Apps/pathlog-feature.png" width="1024" height="500" alt="PathLog travel journal shown across Android devices" loading="lazy" decoding="async">
+<img class="app-icon" src="./Assets/Apps/pathlog-icon.png" width="512" height="512" alt="" loading="lazy" decoding="async">
+</figure>
+<div class="app-content">
+<p class="app-release">Developed March 2026</p>
+<h3>PathLog</h3>
+<p class="app-subtitle">Travel Log Timeline</p>
+<p class="app-description">Capture photos, videos, notes, and places in one private travel timeline, with offline text recognition, translation, search, backup, and export.</p>
+<ul class="app-features" aria-label="PathLog features">
+<li>Travel timeline</li><li>Offline OCR</li><li>Private on-device journal</li>
+</ul>
+<a class="play-link" href="https://play.google.com/store/apps/details?id=com.simplyworkslabs.pathlog" target="_blank" rel="noopener noreferrer" aria-label="Get PathLog on Google Play">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3a2 2 0 0 0-.6 1.5v16.4a2 2 0 0 0 .6 1.5l9.1-9.7L3.6 2.3Zm10.3 10.9-2.3 2.4 5.5 3.1 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-3.2.2Zm3.2-2.2 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-5.5 3.1 2.3 2.4 3.2.2ZM4.8 1.5l8.1 4.6-2.4 2.5-5.7-7.1Zm0 21 5.7-7.1 2.4 2.5-8.1 4.6Z"/></svg>
+Get it on Google Play
+</a>
+</div>
+</article>
+
+<article class="app-card">
+<figure class="app-visual">
+<img class="app-feature" src="./Assets/Apps/clockpro-feature.png" width="1024" height="500" alt="ClockPro always-on clock faces on Android devices" loading="lazy" decoding="async">
+<img class="app-icon" src="./Assets/Apps/clockpro-icon.png" width="512" height="512" alt="" loading="lazy" decoding="async">
+</figure>
+<div class="app-content">
+<p class="app-release">Developed April 2026</p>
+<h3>ClockPro</h3>
+<p class="app-subtitle">Elegant &amp; Always On</p>
+<p class="app-description">Turn a spare phone into an elegant always-on clock with world times, alarms, timers, sunrise and sunset details, customizable faces, and Night Mode.</p>
+<ul class="app-features" aria-label="ClockPro features">
+<li>Always-on display</li><li>World clock</li><li>Alarms &amp; sleep tools</li>
+</ul>
+<a class="play-link" href="https://play.google.com/store/apps/details?id=com.simplyworkslabs.clockpro" target="_blank" rel="noopener noreferrer" aria-label="Get ClockPro on Google Play">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3a2 2 0 0 0-.6 1.5v16.4a2 2 0 0 0 .6 1.5l9.1-9.7L3.6 2.3Zm10.3 10.9-2.3 2.4 5.5 3.1 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-3.2.2Zm3.2-2.2 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-5.5 3.1 2.3 2.4 3.2.2ZM4.8 1.5l8.1 4.6-2.4 2.5-5.7-7.1Zm0 21 5.7-7.1 2.4 2.5-8.1 4.6Z"/></svg>
+Get it on Google Play
+</a>
+</div>
+</article>
+
+<article class="app-card">
+<figure class="app-visual">
+<img class="app-feature" src="./Assets/Apps/formsnap-feature.png" width="1024" height="500" alt="FormSnap document scanning and PDF tools" loading="lazy" decoding="async">
+<img class="app-icon" src="./Assets/Apps/formsnap-icon.png" width="512" height="512" alt="" loading="lazy" decoding="async">
+</figure>
+<div class="app-content">
+<p class="app-release">Developed May 2026</p>
+<h3>FormSnap</h3>
+<p class="app-subtitle">Fast Document Scan</p>
+<p class="app-description">Scan documents with automatic edge detection, refine every page, choose a visual filter, and create polished PDFs with private on-device processing.</p>
+<ul class="app-features" aria-label="FormSnap features">
+<li>Auto edge detection</li><li>Page editing</li><li>Scan to PDF</li>
+</ul>
+<a class="play-link" href="https://play.google.com/store/apps/details?id=com.simplyworkslabs.formsnap" target="_blank" rel="noopener noreferrer" aria-label="Get FormSnap on Google Play">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3a2 2 0 0 0-.6 1.5v16.4a2 2 0 0 0 .6 1.5l9.1-9.7L3.6 2.3Zm10.3 10.9-2.3 2.4 5.5 3.1 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-3.2.2Zm3.2-2.2 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-5.5 3.1 2.3 2.4 3.2.2ZM4.8 1.5l8.1 4.6-2.4 2.5-5.7-7.1Zm0 21 5.7-7.1 2.4 2.5-8.1 4.6Z"/></svg>
+Get it on Google Play
+</a>
+</div>
+</article>
+
+<article class="app-card">
+<figure class="app-visual">
+<img class="app-feature" src="./Assets/Apps/edog-feature.png" width="1024" height="500" alt="eDog motion-monitoring watchdog camera" loading="lazy" decoding="async">
+<img class="app-icon" src="./Assets/Apps/edog-icon.png" width="512" height="512" alt="" loading="lazy" decoding="async">
+</figure>
+<div class="app-content">
+<p class="app-release">Developed June 2026</p>
+<h3>eDog</h3>
+<p class="app-subtitle">Motion &amp; Bark Watch Dog</p>
+<p class="app-description">Repurpose an old Android phone as a smart watchdog that detects motion, sounds an alert, and records video with audio for later playback or export.</p>
+<ul class="app-features" aria-label="eDog features">
+<li>Motion detection</li><li>Automatic video</li><li>Night Mode</li>
+</ul>
+<a class="play-link" href="https://play.google.com/store/apps/details?id=com.simplyworkslabs.edog" target="_blank" rel="noopener noreferrer" aria-label="Get eDog on Google Play">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3a2 2 0 0 0-.6 1.5v16.4a2 2 0 0 0 .6 1.5l9.1-9.7L3.6 2.3Zm10.3 10.9-2.3 2.4 5.5 3.1 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-3.2.2Zm3.2-2.2 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-5.5 3.1 2.3 2.4 3.2.2ZM4.8 1.5l8.1 4.6-2.4 2.5-5.7-7.1Zm0 21 5.7-7.1 2.4 2.5-8.1 4.6Z"/></svg>
+Get it on Google Play
+</a>
+</div>
+</article>
+
+<article class="app-card">
+<figure class="app-visual">
+<img class="app-feature" src="./Assets/Apps/roadcam-feature.png" width="1024" height="500" alt="RoadCam dual road and cabin dashcam recording" loading="lazy" decoding="async">
+<img class="app-icon" src="./Assets/Apps/roadcam-icon.png" width="512" height="512" alt="" loading="lazy" decoding="async">
+</figure>
+<div class="app-content">
+<p class="app-release">Developed July 2026</p>
+<h3>RoadCam</h3>
+<p class="app-subtitle">Road &amp; Cabin Dashcam</p>
+<p class="app-description">Turn a spare Android phone into a road and cabin camera with front, rear, or dual recording, protected clips, storage rotation, and background capture.</p>
+<ul class="app-features" aria-label="RoadCam features">
+<li>Dual-camera recording</li><li>Clip protection</li><li>Background capture</li>
+</ul>
+<a class="play-link" href="https://play.google.com/store/apps/details?id=com.simplyworkslabs.roadcam" target="_blank" rel="noopener noreferrer" aria-label="Get RoadCam on Google Play">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3a2 2 0 0 0-.6 1.5v16.4a2 2 0 0 0 .6 1.5l9.1-9.7L3.6 2.3Zm10.3 10.9-2.3 2.4 5.5 3.1 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-3.2.2Zm3.2-2.2 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-5.5 3.1 2.3 2.4 3.2.2ZM4.8 1.5l8.1 4.6-2.4 2.5-5.7-7.1Zm0 21 5.7-7.1 2.4 2.5-8.1 4.6Z"/></svg>
+Get it on Google Play
+</a>
+</div>
+</article>
+
+<article class="app-card">
+<figure class="app-visual">
+<img class="app-feature" src="./Assets/Apps/recpro-feature.png" width="1024" height="500" alt="RecPro audio recording dashboard" loading="lazy" decoding="async">
+<img class="app-icon" src="./Assets/Apps/recpro-icon.png" width="512" height="512" alt="" loading="lazy" decoding="async">
+</figure>
+<div class="app-content">
+<p class="app-release">Developed August 2026</p>
+<h3>RecPro</h3>
+<p class="app-subtitle">Lecture &amp; Audio Record</p>
+<p class="app-description">Record lectures, classes, meetings, and interviews—even with the screen off—then search, organize, protect, play, share, and export your audio library.</p>
+<ul class="app-features" aria-label="RecPro features">
+<li>Background recording</li><li>Smart storage</li><li>Private audio library</li>
+</ul>
+<a class="play-link" href="https://play.google.com/store/apps/details?id=com.simplyworkslabs.recpro" target="_blank" rel="noopener noreferrer" aria-label="Get RecPro on Google Play">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3a2 2 0 0 0-.6 1.5v16.4a2 2 0 0 0 .6 1.5l9.1-9.7L3.6 2.3Zm10.3 10.9-2.3 2.4 5.5 3.1 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-3.2.2Zm3.2-2.2 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-5.5 3.1 2.3 2.4 3.2.2ZM4.8 1.5l8.1 4.6-2.4 2.5-5.7-7.1Zm0 21 5.7-7.1 2.4 2.5-8.1 4.6Z"/></svg>
+Get it on Google Play
+</a>
+</div>
+</article>
+
+<article class="app-card">
+<figure class="app-visual">
+<img class="app-feature" src="./Assets/Apps/lullabycam-feature.png" width="1024" height="500" alt="LullabyCam connected nursery monitoring on two Android phones" loading="lazy" decoding="async">
+<img class="app-icon" src="./Assets/Apps/lullabycam-icon.png" width="512" height="512" alt="" loading="lazy" decoding="async">
+</figure>
+<div class="app-content">
+<p class="app-release">Developed September 2026</p>
+<h3>LullabyCam</h3>
+<p class="app-subtitle">Wi-Fi Baby Monitor</p>
+<p class="app-description">Connect two Android phones over local Wi-Fi for private live nursery video, audio, two-way talk, lullabies, white noise, and relaxing nature sounds.</p>
+<ul class="app-features" aria-label="LullabyCam features">
+<li>Live video &amp; audio</li><li>Two-way talk</li><li>No cloud account</li>
+</ul>
+<a class="play-link" href="https://play.google.com/store/apps/details?id=com.simplyworkslabs.lullabycam" target="_blank" rel="noopener noreferrer" aria-label="Get LullabyCam on Google Play">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3a2 2 0 0 0-.6 1.5v16.4a2 2 0 0 0 .6 1.5l9.1-9.7L3.6 2.3Zm10.3 10.9-2.3 2.4 5.5 3.1 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-3.2.2Zm3.2-2.2 3.1-1.8c1-.6 1-1.5 0-2.1l-3.1-1.8-5.5 3.1 2.3 2.4 3.2.2ZM4.8 1.5l8.1 4.6-2.4 2.5-5.7-7.1Zm0 21 5.7-7.1 2.4 2.5-8.1 4.6Z"/></svg>
+Get it on Google Play
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
 <section class="section" id="about" aria-labelledby="about-heading">
 <div class="section-inner">
 <div class="section-heading">
@@ -773,6 +1058,7 @@ h2 {
 
 <nav aria-label="Footer navigation">
 <ul class="footer-links">
+<li><a href="#apps">Apps</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#contact">Contact</a></li>
